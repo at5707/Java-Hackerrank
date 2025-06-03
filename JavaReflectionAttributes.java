@@ -29,12 +29,12 @@
     class JavaReflectionAttributes {
 
         public static void main(String[] args){
-            Class student = ~~Complete this line~~;
-            Method[] methods = ~~Complete this line~~;
+            Class student = Student.class;
+            Method[] methods = student.getDeclaredMethods();
 
             ArrayList<String> methodList = new ArrayList<>();
-            for(~~Complete this line~~){
-                methodList.add(~~Complete this line~~);
+            for(Method method : methods){
+                methodList.add(method.getName());
             }
             Collections.sort(methodList);
             for(String name: methodList){
